@@ -1,55 +1,58 @@
-<!DOCTYPE html><html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سالگرد ازدواجمون</title>
+  <title>سالگرد عاشقونه ما</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Tahoma', sans-serif;
+      font-family: sans-serif;
       background-image: url("family-photo.jpg");
       background-size: cover;
       background-position: center;
+      height: 100vh;
       color: white;
-      text-shadow: 1px 1px 4px #000;
+      text-shadow: 1px 1px 5px black;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      flex-direction: column;
     }
     .overlay {
-      background: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0,0,0,0.5);
       padding: 30px;
-      border-radius: 20px;
+      border-radius: 15px;
       text-align: center;
     }
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 10px;
     }
     p {
       font-size: 1.2rem;
-      margin-top: 20px;
-    }
-    audio {
-      display: none;
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>سولماز عزیزم</h1>
-    <p>
-      امروز سالگرد یکی از قشنگ‌ترین اتفاق‌های زندگیمونه. <br>
-      روزی که مسیرمون یکی شد، دست‌هامون توی دست هم افتاد و دل‌هامون برای هم تپید. <br>
-      ممنونم که هستی، ممنونم که همیشه با منی.<br>
-      دوستت دارم بیشتر از همیشه.
-    </p>
+    <h1>سالگردمون مبارک، سولماز جونم</h1>
+    <p>امروز، فقط امروز نیست...  
+    این یه یادآوریه که من خوشبخت‌ترین آدم زمینم چون تورو دارم.  
+    با تو زندگی قشنگ‌تره، حتی وقتی بارونیه...  
+    دوستت دارم، همیشه، بی‌نهایت.</p>
   </div>
-  <audio autoplay loop>
+
+  <audio id="my-audio" autoplay loop>
     <source src="romantic-song.mp3" type="audio/mpeg">
-    مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
   </audio>
+
+  <script>
+    // برای بعضی مرورگرها نیاز به تعامل کاربر هست برای پخش
+    window.addEventListener("click", () => {
+      const audio = document.getElementById("my-audio");
+      audio.play().catch(() => {});
+    });
+  </script>
 </body>
 </html>
